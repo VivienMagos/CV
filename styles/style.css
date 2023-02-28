@@ -8,7 +8,7 @@ body{
 	gap: 20px;
 	column-gap: 10px;
 }
-.row, .col-md-4 .col-md-5 {
+.row, .col-lg-4 .col-lg-5 {
 	background-color:LightGray;
 }
 .heading {
