@@ -1,0 +1,106 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #02474E;
+}
+.main{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.information{
+	width: 1400px;
+	height: 1400px;
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	transform: translateY(-50%);
+	display: flex;
+}
+#circle {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+	display: flex;
+}
+.feature img{
+	width: 100px;
+	height: 100px;
+}
+.feature{
+	position: absolute;
+	display: flex;
+	color: #b99481;
+}
+.feature div{
+	margin-left: 10px;
+}
+.feature div h1{
+	font-size: 20px;
+}
+.feature div p{
+	margin-top: 8px;
+	font-size: 12px;
+}
+.one {
+	top: 46.5%;
+	right: 10%;
+}
+.two {
+	top: 20%;
+	right: 33%;
+	transform: rotate(-90deg);
+}
+.three {
+	top: 46.5%;
+	left: 10%;
+	transform: rotate(180deg);
+}
+.four {
+	bottom: 20%;
+	right: 37.5%;
+	transform: rotate(-270deg);
+}
+.mobile{
+	width: 700px;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.controls{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.controls h3{
+	margin: 15px 0;
+	color:#b99481;
+}
+#upBtn{
+	width: 30px;
+	cursor: pointer;
+}
+#downBtn{
+	width: 30px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+.overlay{
+	width: 0;
+	height: 0;
+	border-top: 700px solid #b99481;
+	border-right: 700px solid transparent;
+	border-bottom: 700px solid #b99481;
+	border-left: 700px solid #b99481;
+	display: flex;
