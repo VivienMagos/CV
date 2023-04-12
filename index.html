@@ -1,15 +1,195 @@
 <!DOCTYPE html>
-<head>
-    <title>Calculator App</title>
-</head>
-<body>
-        <div class="title">Calculator App</div>
-        <div>
-            <script src="javascript/app.js"></script>
-			<button class="btn" onclick="go()">Show array elements, their sum and their mean:</button>
-			<div id="array"></div>
-			<div id="sum"></div>
-			<div id="average"></div>
+<html>
+	<head>
+		<title>
+			FoxFit 
+		</title>
+		<link rel="stylesheet" href="Style/style.css">
+	</head>
+	<header>
+	    <!-- start first div in the header-->
+        <div id="logo">
+            <a href="index.html"><img id="imgLogo"src=""/></a>
+            <a href="index.html"><img src="" id="logoText"/></a>
+        </div>
+    <!-- end of 1st div -->
+
+    <!-- start 2nd div in the header-->
+    <div class="menu-wrapper">
+        <nav id="nav-menu">
+            <ul>
+                <li>
+                    <a href="#" class="active">Home
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="healthy.html">Healthy Zone
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="member.html">Member Benefits
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="app.html">Our App
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="about.html">About Us
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </li>
+              
+            </ul>
+        </nav>
+    </div>
+    <!-- end 2nd div -->
+	</header> -->
+	<body>
+	<div>
+		<div class="flex-container">
+			<div class="movingLogo"> 
+				<span class="logo_content"> 
+					<img src="Images/14.png" alt="Horizontally moving FoxFit text">
+				</span> 
+			</div> 
+			<div id="logoBig">
+				<img src="Images/MainLogoResized1.png" alt="FoxFit Logo">
 			</div>
-</body>
+		</div>
+	</div>
+		<div id="main">
+		</div>
+			<div class="flex-container2">
+				<!--<div class="custom-shape-divider-top-1681317199">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div> -->
+	<h1> Welcome to the FoxFit Community!</h1>
+	<h2> Are you ready to join a new way of living healthier and happier than ever before?<h2>
+</div>
+				<section class="features section text-center">
+                <div class="container">
+                    <div class="features-inner section-inner">
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+									<img src="Images/5.png" width="200"></img>
+									</div>
+                                    <h4 class="feature-title">Healthy Zone</h4>
+                                    <p class="text-sm">Need some inspiration? Wait no more! We are here to be your muse, not just when exercising but also in the kitchen. After all, they do say a healthy body is made of 20% exercise and 80% diet.</p>
+									<button class="feature-btn" href="healthyZone.html"> Show me!</button>
+								</div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+									<img src="Images/3.png" width="200"></img>
+									</div>
+                                    <h4 class="feature-title">Member Benefits</h4>
+                                    <p class="text-sm">It might be hard to believe, but the benefits we provide go beyond the screen and pumping iron. Have a peak at what treats await our loyal members!</p>
+									<button class="feature-btn" href="memberBenefits.html"> Let's see!</button>
+								</div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+									<img src="Images/8.png" width="200"></img>
+									</div>
+                                    <h4 class="feature-title">Our App</h4>
+                                    <p class="text-sm">We live in a world so vast and fast moving. Who could blame you for wanting instant and diverse accessibility to your health needs? We certainly do not and we have just made it easier than ever!</p>
+									<button class="feature-btn" href="appPage.html"> Show me!</button>
+								</div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+									<img src="Images/9.png" width="200"></img>
+									</div>
+                                    <h4 class="feature-title">About Us</h4>
+                                    <p class="text-sm">Not convinced yet? Yeah, it does sound a little too good to be true. In any case, all we can do is tell you the facts, feel free to have a read.</p>
+									<button class="feature-btn" href="aboutUs.html"> I want to know more!</button>
+								</div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+									<img src="Images/11.png" width="200"></img>
+									</div>
+                                    <h4 class="feature-title">Contact Us</h4>
+                                    <p class="text-sm">Do you have questions? Or are you already decided? Whichever is your case, you will need to click down below and a member of our team will reach out to you shortly.</p>
+									<button class="feature-btn" href="contactUs.html"> I want in!</button>
+								</div>
+                            </div>
+							    <footer>
+
+        <div class="footer-col">
+                <h3>Menu</h3>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="healthy.html">Healthy Zone</a></li>
+                <li><a href="member.html">Member Benefits</a></li>
+                <li><a href="app.html">Our App</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+        </div>
+
+        <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Privacy Policy">Privacy Policy</a></li>
+        </div>
+
+        <div class="footer-col">
+                <h3>Our Social Media</h3>
+                <p>Follow Us on:</p>
+                <div class="icons">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-youtube'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-linkedin-square'></i>
+                    <i class='bx bxl-twitter'></i>
+                </div>
+        </div>
+
+    <div class="footer-col news">
+            <h3>Join our Newsletter</h3>
+            <input type="email" placeholder="Your email address..." id="input-news" required>
+            <button type="submit" id="subs-news">Subscribe</button> 
+            <p id="copy">Copyright &copy 2023 Foxfit.All rights reserved</p>
+    </div>
+   
+
+   </footer>
+	</body>	
 </html>
