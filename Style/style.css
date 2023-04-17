@@ -1,7 +1,33 @@
-@import url(global.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-/*=============== HEADER============= */
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+    border:none;
+    outline:none;
+    scroll-behavior: smooth;
+}
+html{
+    height:100%;
+}
+:root{
+    --bgcolor:rgb( 2, 46, 51);
+    --linkcolor:#b99481;
+    --hover:white;
+}
+body{
+     min-height:100%;
+     display:flex;
+     flex-direction: column;
+     overflow-x: hidden;
+}
+/* NAV - Madalina */
 header{
+	top: 0;
+	left: 0;
     background-color:var(--bgcolor);
     display:flex;
     align-items:center;
@@ -18,10 +44,10 @@ header{
     display:flex;
     align-items: center;
     justify-content:start;
-    width:30px;
 }
 #logo img{
     margin-top:6px;
+	width: 48px;
 }
 #logoText{
     width:10%;
@@ -109,79 +135,85 @@ header{
     transition-delay: 0.75s;
 }
 body{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	background: #02474E;
+}
+/* MAIN CONTENT - Vivien */
+.spacer{
+	width:100%;
+	height: 100px;
+}
+.spacer2{
+	width:100%;
+	height: 50px;
+}
+body{
 	background:#02474E;
 	margin: 0px;
 }
-@media screen and (min-width: 800px) {
+/* Landing Page Design. Includes overview of sections & call to action */
+@media screen and (min-width: 400px) {
 .flex-container {
-	padding-top= 20%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content:center;
-	padding-bottom: 5%
+	padding-bottom: 5%;
 }
 .flex-container > div {
   width: 30%;
   margin: 10px;
-  text-align: center;
   line-height: 30px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
-.flex-container2 >div{
-	display: flex;
-	flex-wrap: nowrap;
+.flex-container2 {
+	display: grid;
+	flex-wrap: wrap;
 	justify-content:center;
-	background-color:#b99481;
-	height: 600px;
+	height: 200px;
 }
-/*.custom-shape-divider-top-1681317199 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+h1, h2{
+	text-align: center;
+	color: #b99481;
+	font-family:'Poppins',sans-serif;
 }
-
-.custom-shape-divider-top-1681317199 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1681317199 .shape-fill {
-    fill: #02474E;
-} */
 html { 
 	overflow-x: hidden;
-} 
+}
+/* Section to grab attention, inspired by a brand called Romagnoli Shoes link:https://romagnoli.com/ */
 .movingLogo{ 
-	position: absolute; 
+	top: 0; 
+	left: 50%; 
+	width: 100%; 
+	padding: 25px 0; 
+	background-color: transparent;
+} 
+/* Inspiration for moving text logo was taken from horizontally moving news headlines */
+.logo_content { 
+	position: sticky; 
 	top: 0; 
 	left: 0; 
 	width: 100%; 
 	padding: 25px 0; 
-	background-color: #02474E; 
-} 
-.logo_content { 
-	padding-top: 25%;
+	background-color: #02474E;
+	padding-top: 10%;
 	display: block; 
-	/* Give a width */ 
 	width: 100%; 
 	transform: translateX(350%); /* Animation start out of the screen */ 
-/* Add the animation */ 
 	animation: move 15s linear infinite /* Reapeat the animation indefinitely */; 
 } 
-/* Create the animation */ 
+/* Create the animation for shake effect on main logo image*/ 
 @keyframes move { 
 	to { transform: translateX(-220%); } 
 }
 #logoBig{ 
   /* Start the shake animation and make the animation last for 0.5 seconds */ 
-  animation: shake 7s; 
+	animation: shake 7s; 
   /* When the animation is finished, start again */ 
-  animation-iteration-count: infinite; 
+	animation-iteration-count: infinite; 
 } 
 @keyframes shake { 
 	0% { transform: translate(1px, 1px) rotate(0deg); }  
@@ -196,73 +228,84 @@ html {
 	90% { transform: translate(1px, 2px) rotate(0deg); } 
 	100% { transform: translate(1px, -2px) rotate(-1deg); } 	
 }
-/*.is-revealing{
-	visibility:hidden
-} */
+/* Research on keyframes syntax was conducted on CSS-Tricks, W3 Schools and Stack Overflow */
+/* Features section to contain prompts for user and links to each page as seen on landing page of https://th.ie/ */
 .text-sm{
 	color:#02474E;
+	font-family:'Poppins',sans-serif;
 }
 .features .section-title{
-						margin-bottom:48px;
-						padding-top: 5%
-					}
-					.features-wrap{
-						display:flex;
-						flex-wrap:wrap;
-						justify-content:center;
-						margin-right:-12px;
-						margin-left:-12px;
-					}
-					.features-wrap:first-child{
-						margin-top:-12px
-					}
-					.features-wrap:last-child{
-						margin-bottom:-12px
-					}
-					.feature{
-						padding:12px;
-						width:276px;
-						max-width:276px;
-						flex-grow:1
-					}
-					.feature-inner{
-						height:100%;
-						background:#b99481;
-						padding:40px 24px;
-						box-shadow:0 16px 48px #b99481;
-					}
-					@supports (-ms-ime-align: auto){
-					.feature-inner{
-						box-shadow:0 16px 48px rgba(31,43,53,0.12);
-						}
-					}
-					.feature-icon{
-						display:flex;
-						justify-content:center;
-					}
-					.feature-title{
-						margin-top:12px;
-						margin-bottom:8px;
-						color: #02474E;
-						text-align:center;
-					}
-					@media (min-width: 641px){
-					.features{
-						position:relative;
-					}
-					.features .section-square{
-						position:absolute;
-						top:0;
-						left:0;
-						height:240px;
-						width:44%;
-						background:#F6F8FA;
-					}
-					.features .section-title{
-						margin-bottom:56px
-						}
-					}
-/*=================FOOTER============== */
+	margin-bottom:48px;
+	padding-top: 5%
+}
+.features-wrap{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	margin-right:-12px;
+	margin-left:-12px;
+}
+.features-wrap:first-child{
+	margin-top:-12px
+}
+.features-wrap:last-child{
+	margin-bottom:-12px
+}
+.feature{
+	padding:12px;
+	width:276px;
+	max-width:276px;
+	flex-grow:1
+}
+.feature-inner{
+	height:100%;
+	background:#b99481;
+	padding:40px 24px;
+	box-shadow:0 16px 48px #b99481;
+}
+/@supports (-ms-ime-align: auto){
+.feature-inner{
+	box-shadow:0 16px 48px rgba(31,43,53,0.12);
+}
+}
+.feature-icon{
+	display:flex;
+	justify-content:center;
+}
+.feature-title{
+	margin-top:12px;
+	margin-bottom:8px;
+	color: #02474E;
+	text-align:center;
+}
+@media (min-width: 641px){
+.features{
+	position:relative;
+}
+.features .section-square{
+	position:absolute;
+	top:0;
+	left:0;
+	height:240px;
+	width:44%;
+	background:#F6F8FA;
+}
+.features .section-title{
+	margin-bottom:56px
+}
+.feature-btn{
+    padding: 5px;
+    width: 100px;
+    border-radius: 10px;
+    background: #02474E;
+    outline: none;
+    border-color: #02474E;
+    border: none;
+    cursor: pointer;
+	color: #b99481;
+	margin-top: 10%;
+}
+/*FOOTER - Madalina */
 .footer-wrapper{
     margin-top:auto;
     width:100%;
@@ -272,6 +315,7 @@ html {
 footer{
     background:var(--bgcolor);
     display:flex;
+	width: 100%;
     
 }
 footer .footer-col{
