@@ -1,15 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+    border:none;
+    outline:none;
+    scroll-behavior: smooth;
+}
+html{
+    height:100%;
+}
+:root{
+    --bgcolor:rgb( 2, 46, 51);
+    --linkcolor:#b99481;
+    --hover:white;
+}
 body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+     min-height:100%;
+     display:flex;
+     flex-direction: column;
+     overflow-x: hidden;
+}
+/* Nav - Madalina */
+header{
+	top: 0;
+	left: 0;
+    background-color:var(--bgcolor);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    width:100%;
+    position: fixed;
+    z-index:999;
+}
+/* logo */
+
+#logo{
+    display:flex;
+    align-items: center;
+    justify-content:start;
+}
+#logo img{
+    margin-top:6px;
+	width: 48px;
+}
+#logoText{
+    width:10%;
+}
+/* navigation */
+
+.menu-wrapper{
+    margin-right:30px;
+    width:70%;
+}
+#nav-menu ul{
+    display:flex;
+    align-items:center;
+    justify-content: end;
+}
+#nav-menu ul li a{
+    display:block;
+    color:var(--hover);
+    font-size:1rem;
+    padding:8px 20px;
+    transition: 0.2s;
+    margin:0 .25rem;
+}
+#nav-menu a:hover,
+#nav-menu a.active{
+    color:var(--linkcolor);
+}
+#nav-menu a{
+    position:relative;
+    display:inline-block;
+    padding:15px 30px;
+    overflow: hidden;
+    transition:0.2s;
+}
+#nav-menu a span{
+    position:absolute;
+    display:block;
+}
+#nav-menu a span:nth-child(1){
+    top:0;
+    left:-100%;
+    width:100%;
+    height: 2px;
+    background:linear-gradient(90deg,transparent,var(--linkcolor));
+}
+#nav-menu a:hover span:nth-child(1){
+    left:100%;
+    transition:1s;
+    box-shadow:0 8px 60px 0 lightgrey;
+}
+#nav-menu a span:nth-child(3){
+    bottom:0;
+    right:-100%;
+    width:100%;
+    height: 2px;
+    background:linear-gradient(270deg,transparent,var(--linkcolor));
+}
+#nav-menu a:hover span:nth-child(3){
+    right:100%;
+    transition:1s;
+    transition-delay: 0.5s;
+}
+#nav-menu a span:nth-child(2){
+    top:-100%;
+    right:0;
+    width:2px;
+    height: 100%;
+    background:linear-gradient(180deg,transparent,var(--linkcolor));
+}
+#nav-menu a:hover span:nth-child(2){
+    top:100%;
+    transition:1s;
+    transition-delay:0.25s;
+}
+#nav-menu a span:nth-child(4){
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height: 100%;
+    background:linear-gradient(360deg,transparent,var(--linkcolor));
+}
+#nav-menu a:hover span:nth-child(4){
+    bottom:100%;
+    transition:1s;
+    transition-delay: 0.75s;
+}
+/* Main Content - Vivien */
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
 	background: #02474E;
+}
+.spacer{
+	width:100%;
+	height: 200px;
+}
+.spacer2{
+	width:100%;
+	height: 50px;
 }
 .main{
 	width: 100%;
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 25%;
 }
+/* To contain elements that move, inspired by Khulaid Pervaiz from morioh.com */
 .information{
 	width: 1400px;
 	height: 1400px;
@@ -19,6 +167,7 @@ body{
 	transform: translateY(-50%);
 	display: flex;
 }
+/* Circle used to judge degrees by which the rotation must occur */
 #circle {
 	width: 100%;
 	height: 100%;
@@ -30,6 +179,7 @@ body{
 	transition: 1s;
 	display: flex;
 }
+/* Adjustment of moving text and images */
 .feature img{
 	width: 100px;
 	height: 100px;
@@ -49,6 +199,7 @@ body{
 	margin-top: 8px;
 	font-size: 12px;
 }
+/* Moving parts spaced out and rotated to stay upright when moved */
 .one {
 	top: 46.5%;
 	right: 10%;
@@ -68,14 +219,16 @@ body{
 	right: 37.5%;
 	transform: rotate(-270deg);
 }
+/* Phone image */
 .mobile{
 	width: 700px;
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 10%;
 	transform: translateY(-50%);
 	z-index: 1;
 }
+/* Styling the section which user can control */
 .controls{
 	position: absolute;
 	right: 10%;
@@ -96,6 +249,7 @@ body{
 	cursor: pointer;
 	transform: rotate(180deg);
 }
+/* Four triangles, one transparent to hide elements other than the one that is meant to be seen */
 .overlay{
 	width: 0;
 	height: 0;
@@ -104,3 +258,91 @@ body{
 	border-bottom: 700px solid #b99481;
 	border-left: 700px solid #b99481;
 	display: flex;
+}
+/*=================FOOTER============== - Madalina */
+.footer-wrapper{
+    margin-top: auto;
+    width:100%;
+    height:25%;
+    border:1px solid red;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+footer{
+    background:var(--bgcolor);
+    display:flex;
+	width: 100%;
+    bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+footer .footer-col{
+    margin:1px 5px 0 2px;
+    height:100%;
+    width:25%;
+    padding:10px 0  0 30px;
+    line-height:1rem;
+}
+
+footer a{
+    color:rgba(255,255,255,.5);
+    font-size: .8rem;
+}
+footer .footer-col a:hover{
+    color:var(--linkcolor);
+}
+footer .footer-col h3{
+    color:var(--hover);
+    font-weight: 200;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+footer .footer-col p{
+    color:rgba(255,255,255,.5);
+    font-size:.8rem;
+    text-align: start;
+}
+footer .footer-col .icons{
+    display:flex;
+    align-items:start;
+    justify-content: start;
+    margin-top:10px;
+}
+footer .footer-col i{
+ margin:8px 5px 0 0;
+ color:var(--hover);
+ background-color:rgba(255,255,255,.2);
+ padding:5px;
+ border-radius:5px;
+ backdrop-filter: blur(4px);
+}
+footer .footer-col i:hover{
+    color:var(--linkcolor)
+}
+
+footer #input-news{
+    background:rgba(255,255,255,.8);
+    padding:3px 9px;
+    border-radius:5px;
+    backdrop-filter: blur(5px);
+    margin-top:30px;
+}
+footer #subs-news{
+    background-color:var(--hover);
+    padding:3px 9px;
+    border-radius:5px;
+    color:var(--bgcolor);
+    font-weight: 600;
+    font-size:.9rem;
+}
+footer #subs-news:hover{
+    background-color:var(--linkcolor);
+    color:var(--hover);
+}
+footer #copy{
+    font-size:.8rem;
+    margin-top:25px;
+}
