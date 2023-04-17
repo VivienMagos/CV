@@ -1,0 +1,294 @@
+@import url(global.css);
+@import url(nav.css);
+@import url(footer.css);
+/* ===============sections global============ */
+section .hero,
+.topics{
+    min-height:100vh;
+    margin-bottom:-1rem;
+    min-width:100vw;
+}
+
+/* ==========hero-section=============== */
+.hero{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:.5%;
+   position: relative;
+   width:100vw;
+}
+#yin{
+    position: absolute;
+    margin-top:29%;
+    margin-left:55%;
+}
+#yang{
+    position: absolute;
+    margin-top:16%;
+    margin-left:38%;
+}
+#hero-text-healthy,
+#hero-text-zone{
+    font-size: 4rem;
+    color: var(--linkcolor);
+    top:2%;
+    left:40%;
+    z-index:99;
+    transform: translate(-10%,-40%);
+    position: absolute;
+    margin-top:25.5%;
+}
+#hero-text-healthy{
+   margin-left:-7.5%;
+   z-index:2;
+}
+#hero-text-zone{
+    margin-left:14%;
+    color:rgb( 2, 46, 51);
+}
+#leaf,plant{
+    position:absolute;
+    z-index: 99;
+    height:100vh;
+    width:100vw;
+}
+
+/* ====================topics section============== */
+.topics{
+    background-color:#fff;
+    z-index:99; 
+    min-height:100vh; 
+    width:100vw;
+}
+.topics-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.topics span{
+    color:rgb( 2, 46, 51);
+}
+/*======== rolling text box=========== */
+span .topics-heading{
+    display:inline-block;
+    overflow: hidden;
+}
+span .up{
+    display: inline-block;
+    position: relative;
+    transition:transform .2s;
+    color:white;
+    white-space:nowrap;
+}
+span .up::before{
+    top:110%;
+    content:attr(data-up);
+    color:var(--linkcolor);
+    position: absolute;
+}
+span .up:hover,
+     .up:focus{
+        transform:translate3d(0, -113%, 0);
+        }
+/* ==========end of rolling text ===========*/
+.topics h2{
+    text-align:center;
+    margin:20vh 0 10vh 0;
+    font-size: 2rem;
+    color:var(--linkcolor);
+    position:relative;
+}
+.topics h2::before{
+    position:absolute;
+    content:"Topics";
+    opacity:20%;
+    font-size: 4rem;
+    bottom:5%;
+    left:42%;
+    color:darkgrey;
+}
+.topics-container{
+    display:flex;
+    width:100vw;
+    align-items:center;
+    justify-content: center;
+}
+.topics-box{
+    border-radius:2rem;
+    box-shadow:0 0 2rem darkgrey;
+    overflow: hidden;
+    margin-right:0.5rem;
+    width:max-content;
+    background-color:var(--linkcolor);
+    display:flex;
+    flex-direction:column;
+}
+.topics-box h3{
+    color:#fff;
+    text-align: center;
+    padding:10px;
+}
+.topics h3:hover{
+    color:var(--bgcolor);
+    cursor:pointer;
+    transition:0.5s ease;
+    background-color: #fff;
+ 
+}
+.topics img{
+    background-position: center;
+    background-size: cover;
+    transition:.5s ease;
+    z-index:999;
+}
+.topics img:hover{
+    transform:scale(1.1);
+}
+/* ===============topics section-the articles=========== */
+/* general */
+.topics-articles{
+    background-color:var(--hover);
+    z-index:99;  
+    position: relative;
+}
+.topics-articles h2{
+    color:var(--bgcolor);
+    text-align:center;
+    margin-top:4rem;
+    text-decoration: 1px solid #fff;
+}
+.topics-articles span{
+    color:var(--linkcolor);
+}
+.topics-articles img{
+    box-shadow: 2px 9px 10px 1px rgba(0,0,0,.8);
+}
+.empty{
+    width:100%;
+    padding:2%;
+}
+.line-1{
+    position:absolute;
+    height:15%;
+    width:2px;
+    background:lightgray;
+    top:7.25%;
+    left:2%;
+}
+.line-2{
+    position:absolute;
+    height:16%;
+    width:2px;
+    background:lightgray;
+    top:32%;
+    right:3%;
+}
+.line-3{
+    position:absolute;
+    height:13%;
+    width:2px;
+    background:lightgray;
+    top:58%;
+    left:3%;
+}
+.line-4{
+    position:absolute;
+    height:15%;
+    width:2px;
+    background:lightgray;
+    top:82%;
+    right:3%;
+}
+
+/* eatbetter */
+.eatbetter::before{
+    position:absolute;
+    content:"Eat Better";
+    opacity:30%;
+    font-size: 3rem;
+    top:1%;
+    left:41%;
+    color:darkgrey;
+    z-index:-1;
+}
+.topics-articles-container{
+    width:100%;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+  align-items:center;
+}
+.topics-article-box{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+}
+#article-eatbetter p{
+    color:#000;
+    font-size: .8rem;
+    font-weight:100;
+    padding-right:25px;
+    text-indent: 40px;
+}
+#first-letter{
+    font-weight: 600;
+    color:var(--bgcolor);
+    font-size:1.5rem;
+}
+/* getfit */
+#article-getfit p{
+    text-indent: 40px;
+    color:#000;
+    font-size: .8rem;
+    font-weight:100;
+    padding-left:25px;
+}
+.getfit::before{
+    position:absolute;
+    content:"Get Fit";
+    opacity:30%;
+    font-size: 3rem;
+    top:26%;
+    left:44%;
+    color:darkgrey;
+    z-index:-1;
+}
+/* manage weight */
+.manageweight::before{
+    position:absolute;
+    content:"Manage Weight";
+    opacity:30%;
+    font-size: 3rem;
+    top:51%;
+    left:35%;
+    color:darkgrey;
+    z-index:-1;
+}
+#article-manageweight p{
+    text-indent: 40px;
+    color:#000;
+    font-size: .8rem;
+    font-weight:100;
+    padding-left:25px;
+    padding-right:18px;
+}
+/* livewell */
+.livewell::before{
+    position:absolute;
+    content:"Live Well";
+    opacity:30%;
+    font-size: 3rem;
+    top:76%;
+    left:42%;
+    color:darkgrey;
+    z-index:-1;
+}
+#article-livewell p{
+    text-indent: 40px;
+    color:#000;
+    font-size: .8rem;
+    font-weight:100;
+    padding-left:25px;
+}

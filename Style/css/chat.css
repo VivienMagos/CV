@@ -1,0 +1,16 @@
+@import url(global.css);
+/* =================CHAT BOX============== */
+.chat-wrapper{
+   background:var(--hover);
+   box-shadow: 0 16px 50px 0 lightgray;
+   max-width:20vw;
+   border-radius:25px;
+   margin-top:10vh;
+   margin-right:15px;
+   margin-bottom: 50px;
+   position:absolute; 
+}
+.chat-container{
+    border:2px solid red;
+    padding:10px;
+}
